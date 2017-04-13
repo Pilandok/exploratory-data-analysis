@@ -15,7 +15,7 @@ png(filename = "plot2.png", width = 480, height = 480, units = "px")
 plot(rownames(total.emissions), total.emissions/1000, 
      type = "b", pch = 18, col = "red", 
      ylab = "Total PM2.5 Emissions(in kilotons)", 
-     xlab = "Year", main = "Annual Emissions")
+     xlab = "Year", main = "Annual Emissions for Maryland")
 
 # Close the PNG device
 dev.off()
