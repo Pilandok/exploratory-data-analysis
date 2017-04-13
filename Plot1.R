@@ -10,7 +10,7 @@ png(filename = "plot1.png", width = 480, height = 480, units = "px")
 
 #plot the data
 plot(rownames(total.emissions), total.emissions/1000000, 
-     type = "b", pch = 18, col = "green", 
+     type = "b", pch = 18, col = "red", 
      ylab = "Total PM2.5 Emissions(in million tons)", 
      xlab = "Year", main = "Annual Emissions")
 
