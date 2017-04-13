@@ -1,0 +1,18 @@
+## This first line will likely take a few seconds. Be patient!
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+
+#make sum of emissions
+total.emissions <- tapply(NEI$Emissions, NEI$year, sum)
+
+#open PNG device
+png(filename = "plot1.png", width = 480, height = 480, units = "px")
+
+#plot the data
+plot(rownames(total.emissions), total.emissions/1000000, 
+     type = "b", pch = 18, col = "green", 
+     ylab = "Total PM2.5 Emissions(in million tons)", 
+     xlab = "Year", main = "Annual Emissions")
+
+# Close the PNG device
+dev.off()
